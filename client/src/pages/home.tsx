@@ -76,57 +76,64 @@ export default function Home() {
               Такси в комендантский час
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 max-w-4xl mx-auto">
-              <Button
-                asChild
-                size="lg"
-                className="w-full sm:w-auto text-lg bg-accent border border-accent-border backdrop-blur-md"
-                data-testid="button-call"
-              >
-                <a href={`tel:${PHONE_NUMBER}`}>
-                  <Phone className="w-5 h-5 mr-2" />
-                  Позвонить
-                </a>
-              </Button>
+            <div className="space-y-6 pt-8 max-w-4xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-auto text-lg bg-accent border border-accent-border backdrop-blur-md"
+                  data-testid="button-call"
+                >
+                  <a href={`tel:${PHONE_NUMBER}`}>
+                    <Phone className="w-5 h-5 mr-2" />
+                    Позвонить
+                  </a>
+                </Button>
 
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
-                data-testid="button-telegram-bot"
-              >
-                <a href={TELEGRAM_BOT_LINK} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-telegram w-5 h-5 mr-2" />
-                  Заказать в Telegram
-                </a>
-              </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
+                  data-testid="button-telegram"
+                >
+                  <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-telegram w-5 h-5 mr-2" />
+                    Написать
+                  </a>
+                </Button>
 
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
-                data-testid="button-telegram"
-              >
-                <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-telegram w-5 h-5 mr-2" />
-                  Написать
-                </a>
-              </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
+                  data-testid="button-viber"
+                >
+                  <a href={VIBER_LINK}>
+                    <i className="fab fa-viber w-5 h-5 mr-2" />
+                    Viber
+                  </a>
+                </Button>
+              </div>
 
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
-                data-testid="button-viber"
-              >
-                <a href={VIBER_LINK}>
-                  <i className="fab fa-viber w-5 h-5 mr-2" />
-                  Viber
-                </a>
-              </Button>
+              <div className="flex flex-col items-center gap-2">
+                <p className="text-sm text-white/70 font-medium">
+                  наш телеграм бот
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
+                  data-testid="button-telegram-bot"
+                >
+                  <a href={TELEGRAM_BOT_LINK} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-telegram w-5 h-5 mr-2" />
+                    Заказать в Telegram
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
