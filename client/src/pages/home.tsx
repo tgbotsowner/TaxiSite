@@ -175,12 +175,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${carImage})`, backgroundPosition: 'center 40%' }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80" />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             ВЫЗВАТЬ ТАКСИ
           </h2>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
+          <p className="text-xl md:text-2xl text-white/90 mb-8">
             {PHONE_DISPLAY}
           </p>
           <Button
