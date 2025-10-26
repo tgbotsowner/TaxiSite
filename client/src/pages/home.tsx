@@ -6,7 +6,7 @@ const PHONE_NUMBER = "+380777799989";
 const PHONE_DISPLAY = "+380 777 799 989";
 const TELEGRAM_LINK = `https://t.me/${PHONE_NUMBER}`;
 const TELEGRAM_BOT_LINK = "https://t.me/TaxiDnepr_24_7_bot";
-const VIBER_LINK = `viber://chat?number=${encodeURIComponent(PHONE_NUMBER)}`;
+const VIBER_LINK = `viber://chat?number=${encodeURIComponent("+380992311552")}`;
 
 const advantages = [
   {
