@@ -5,6 +5,7 @@ import carImage from "@assets/photo_2025-10-26_15-30-58_1761485468561.jpg";
 const PHONE_NUMBER = "+380777799989";
 const PHONE_DISPLAY = "+380 777 799 989";
 const TELEGRAM_LINK = `https://t.me/${PHONE_NUMBER}`;
+const TELEGRAM_BOT_LINK = "https://t.me/TaxiDnepr_24_7_bot";
 const VIBER_LINK = `viber://chat?number=${encodeURIComponent(PHONE_NUMBER)}`;
 
 const advantages = [
@@ -61,7 +62,7 @@ export default function Home() {
             <div className="inline-block px-6 py-2 bg-accent/90 backdrop-blur-md rounded-full">
               <p className="text-sm md:text-base font-semibold text-accent-foreground flex items-center gap-2 justify-center">
                 <Clock className="w-4 h-4" />
-                Работаем с 22:00 до 05:00
+                Работаем с 22:00 до 06:00
               </p>
             </div>
 
@@ -75,7 +76,7 @@ export default function Home() {
               Такси в комендантский час
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 max-w-3xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 max-w-4xl mx-auto">
               <Button
                 asChild
                 size="lg"
@@ -93,11 +94,24 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
+                data-testid="button-telegram-bot"
+              >
+                <a href={TELEGRAM_BOT_LINK} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-telegram w-5 h-5 mr-2" />
+                  Заказать в Telegram
+                </a>
+              </Button>
+
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto text-lg bg-white/10 border-white/30 text-white backdrop-blur-md"
                 data-testid="button-telegram"
               >
                 <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-telegram w-5 h-5 mr-2" />
-                  Telegram
+                  Написать
                 </a>
               </Button>
 
@@ -192,7 +206,7 @@ export default function Home() {
               </h3>
               <p className="text-muted-foreground flex items-center gap-2 mb-2">
                 <Clock className="w-4 h-4" />
-                Работаем с 22:00 до 05:00
+                Работаем с 22:00 до 06:00
               </p>
             </div>
 
@@ -236,11 +250,22 @@ export default function Home() {
                   asChild
                   variant="outline"
                   className="w-full justify-start"
+                  data-testid="button-telegram-bot-footer"
+                >
+                  <a href={TELEGRAM_BOT_LINK} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-telegram w-4 h-4 mr-2" />
+                    Заказать в Telegram
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full justify-start"
                   data-testid="button-telegram-footer"
                 >
                   <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-telegram w-4 h-4 mr-2" />
-                    Telegram
+                    Написать
                   </a>
                 </Button>
                 <Button
