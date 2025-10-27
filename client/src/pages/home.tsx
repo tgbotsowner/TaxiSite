@@ -181,7 +181,7 @@ export default function Home() {
                 <Car className="w-8 h-8 md:w-10 md:h-10 text-primary" />
               </div>
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                2500+
+                1500+
               </div>
               <div className="text-base md:text-lg text-muted-foreground">
                 Выполненных поездок
@@ -205,7 +205,7 @@ export default function Home() {
                 <Users className="w-8 h-8 md:w-10 md:h-10 text-primary" />
               </div>
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                2000+
+                1000+
               </div>
               <div className="text-base md:text-lg text-muted-foreground">
                 Довольных клиентов
