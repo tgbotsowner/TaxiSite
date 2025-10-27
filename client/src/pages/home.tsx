@@ -1,4 +1,4 @@
-import { Phone, Clock, Car, MapPin, Package, DollarSign, Globe, MousePointerClick } from "lucide-react";
+import { Phone, Clock, Car, MapPin, Package, DollarSign, Globe, MousePointerClick, Users, Star, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import carImage from "@assets/photo_2025-10-26_15-30-58_1761485468561.jpg";
 
@@ -141,6 +141,36 @@ export default function Home() {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-3 bg-white/50 rounded-full" />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-y border-card-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="text-center" data-testid="stat-trips">
+              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full mb-4">
+                <Car className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">5000+</div>
+              <div className="text-base md:text-lg text-muted-foreground">Выполненных поездок</div>
+            </div>
+
+            <div className="text-center" data-testid="stat-rating">
+              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-accent/10 rounded-full mb-4">
+                <Star className="w-8 h-8 md:w-10 md:h-10 text-accent" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">4.9</div>
+              <div className="text-base md:text-lg text-muted-foreground">Средний рейтинг</div>
+            </div>
+
+            <div className="text-center" data-testid="stat-clients">
+              <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full mb-4">
+                <Users className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">2000+</div>
+              <div className="text-base md:text-lg text-muted-foreground">Довольных клиентов</div>
+            </div>
           </div>
         </div>
       </section>
