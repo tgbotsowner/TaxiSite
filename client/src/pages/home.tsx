@@ -1,4 +1,16 @@
-import { Phone, Clock, Car, MapPin, Package, DollarSign, Globe, MousePointerClick, Users, Star, Award } from "lucide-react";
+import {
+  Phone,
+  Clock,
+  Car,
+  MapPin,
+  Package,
+  DollarSign,
+  Globe,
+  MousePointerClick,
+  Users,
+  Star,
+  Award,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import carImage from "@assets/photo_2025-10-26_15-30-58_1761485468561.jpg";
 
@@ -12,45 +24,45 @@ const advantages = [
   {
     icon: Clock,
     title: "Заберем с любой точки Днепра",
-    description: "Даже ночью и в комендантский час"
+    description: "Даже ночью и в комендантский час",
   },
   {
     icon: Car,
     title: "Комфортный автомобиль бизнес-класса",
-    description: "Чистый салон, кондиционер"
+    description: "Чистый салон, кондиционер",
   },
   {
     icon: MapPin,
     title: "Переезд через мост — не проблема",
-    description: "Даже при перекрытии"
+    description: "Даже при перекрытии",
   },
   {
     icon: Package,
     title: "Доставка еды и лекарств",
-    description: "Бургеры, шаурма, алкоголь, лекарства, зарядки, пауэрбанки"
+    description: "Бургеры, шаурма, алкоголь, лекарства, зарядки, пауэрбанки",
   },
   {
     icon: DollarSign,
     title: "Честные тарифы",
-    description: "Каждый маршрут рассчитывается индивидуально"
+    description: "Каждый маршрут рассчитывается индивидуально",
   },
   {
     icon: Globe,
     title: "Поездки по городу и межгород",
-    description: "По всей Украине"
+    description: "По всей Украине",
   },
   {
     icon: MousePointerClick,
     title: "Заказ в один клик",
-    description: "Нажмите кнопку и позвоните нам!"
-  }
+    description: "Нажмите кнопку и позвоните нам!",
+  },
 ];
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${carImage})` }}
         >
@@ -84,7 +96,10 @@ export default function Home() {
                   className="w-full sm:w-auto text-base sm:text-lg min-h-[56px] sm:min-h-[44px] bg-accent border border-accent-border backdrop-blur-md"
                   data-testid="button-call"
                 >
-                  <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center">
+                  <a
+                    href={`tel:${PHONE_NUMBER}`}
+                    className="flex items-center justify-center"
+                  >
                     <Phone className="w-5 h-5 mr-2" />
                     Позвонить
                   </a>
@@ -97,7 +112,12 @@ export default function Home() {
                   className="w-full sm:w-auto text-base sm:text-lg min-h-[56px] sm:min-h-[44px] bg-white/10 border-white/30 text-white backdrop-blur-md"
                   data-testid="button-telegram"
                 >
-                  <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                  <a
+                    href={TELEGRAM_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
                     <i className="fab fa-telegram w-5 h-5 mr-2" />
                     Написать
                   </a>
@@ -110,7 +130,10 @@ export default function Home() {
                   className="w-full sm:w-auto text-base sm:text-lg min-h-[56px] sm:min-h-[44px] bg-white/10 border-white/30 text-white backdrop-blur-md"
                   data-testid="button-viber"
                 >
-                  <a href={VIBER_LINK} className="flex items-center justify-center">
+                  <a
+                    href={VIBER_LINK}
+                    className="flex items-center justify-center"
+                  >
                     <i className="fab fa-viber w-5 h-5 mr-2" />
                     Viber
                   </a>
@@ -128,7 +151,12 @@ export default function Home() {
                   className="w-full sm:w-auto text-base sm:text-lg min-h-[56px] sm:min-h-[44px] bg-white/10 border-white/30 text-white backdrop-blur-md"
                   data-testid="button-telegram-bot"
                 >
-                  <a href={TELEGRAM_BOT_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                  <a
+                    href={TELEGRAM_BOT_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
                     <i className="fab fa-telegram w-5 h-5 mr-2" />
                     Заказать в Telegram
                   </a>
@@ -152,24 +180,36 @@ export default function Home() {
               <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full mb-4">
                 <Car className="w-8 h-8 md:w-10 md:h-10 text-primary" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">5000+</div>
-              <div className="text-base md:text-lg text-muted-foreground">Выполненных поездок</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                2500+
+              </div>
+              <div className="text-base md:text-lg text-muted-foreground">
+                Выполненных поездок
+              </div>
             </div>
 
             <div className="text-center" data-testid="stat-rating">
               <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-accent/10 rounded-full mb-4">
                 <Star className="w-8 h-8 md:w-10 md:h-10 text-accent" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">4.9</div>
-              <div className="text-base md:text-lg text-muted-foreground">Средний рейтинг</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                4.97
+              </div>
+              <div className="text-base md:text-lg text-muted-foreground">
+                Средний рейтинг
+              </div>
             </div>
 
             <div className="text-center" data-testid="stat-clients">
               <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full mb-4">
                 <Users className="w-8 h-8 md:w-10 md:h-10 text-primary" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">2000+</div>
-              <div className="text-base md:text-lg text-muted-foreground">Довольных клиентов</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                2000+
+              </div>
+              <div className="text-base md:text-lg text-muted-foreground">
+                Довольных клиентов
+              </div>
             </div>
           </div>
         </div>
@@ -182,7 +222,9 @@ export default function Home() {
               НАШИ ПРЕИМУЩЕСТВА
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Быстрая подача, комфортный автомобиль бизнес-класса с кондиционером, доставка еды, лекарств и нужных вещей в любую точку города и Украины.
+              Быстрая подача, комфортный автомобиль бизнес-класса с
+              кондиционером, доставка еды, лекарств и нужных вещей в любую точку
+              города и Украины.
             </p>
           </div>
 
@@ -213,9 +255,12 @@ export default function Home() {
       </section>
 
       <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${carImage})`, backgroundPosition: 'center 40%' }}
+          style={{
+            backgroundImage: `url(${carImage})`,
+            backgroundPosition: "center 40%",
+          }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/80" />
         </div>
@@ -233,7 +278,10 @@ export default function Home() {
             className="text-base sm:text-lg md:text-xl min-h-[56px] sm:min-h-[44px] w-full sm:w-auto bg-accent border border-accent-border"
             data-testid="button-call-cta"
           >
-            <a href={`tel:${PHONE_NUMBER}`} className="flex items-center justify-center">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              className="flex items-center justify-center"
+            >
               <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
               ПОЗВОНИТЬ ПРЯМО СЕЙЧАС
             </a>
@@ -259,8 +307,8 @@ export default function Home() {
                 Контакты
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground mb-2">
-                <a 
-                  href={`tel:${PHONE_NUMBER}`} 
+                <a
+                  href={`tel:${PHONE_NUMBER}`}
                   className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center"
                   data-testid="link-phone-footer"
                 >
@@ -296,7 +344,12 @@ export default function Home() {
                   className="w-full justify-start min-h-[48px] sm:min-h-[44px] text-sm sm:text-base"
                   data-testid="button-telegram-bot-footer"
                 >
-                  <a href={TELEGRAM_BOT_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <a
+                    href={TELEGRAM_BOT_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
                     <i className="fab fa-telegram w-4 h-4 mr-2" />
                     Заказать в Telegram
                   </a>
@@ -307,7 +360,12 @@ export default function Home() {
                   className="w-full justify-start min-h-[48px] sm:min-h-[44px] text-sm sm:text-base"
                   data-testid="button-telegram-footer"
                 >
-                  <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                  <a
+                    href={TELEGRAM_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
                     <i className="fab fa-telegram w-4 h-4 mr-2" />
                     Написать
                   </a>
@@ -329,7 +387,8 @@ export default function Home() {
 
           <div className="mt-8 pt-8 border-t border-card-border text-center">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Ночное такси Днепр. Все права защищены.
+              © {new Date().getFullYear()} Ночное такси Днепр. Все права
+              защищены.
             </p>
           </div>
         </div>
