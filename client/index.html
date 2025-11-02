@@ -96,19 +96,21 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-17694211570"
-    ></script>
+    <!-- Event snippet for Контакт conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-17694211570/jmFBCMmwp7gbEPL7oPVB",
+          event_callback: callback,
+        });
+        return false;
       }
-      gtag("js", new Date());
-
-      gtag("config", "AW-17694211570");
     </script>
   </head>
   <body>
