@@ -96,13 +96,13 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Google Ads Tag + Event (Контакт / Звонок) -->
+    <!-- 🔹 Google Ads Tag + Конверсии: "Контакт" и "Номер на странице гугл" -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-17694211570"
     ></script>
     <script>
-      // === Основная инициализация Google Ads Tag ===
+      // === Глобальный тег (на все страницы) ===
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -110,15 +110,27 @@
       gtag("js", new Date());
       gtag("config", "AW-17694211570");
 
-      // === Отслеживание звонков (конверсия "Контакт") ===
-      function gtag_report_conversion(url) {
+      // === Конверсия 1: Контакт (кнопка Позвонить) ===
+      function gtag_report_contact(url) {
         var callback = function () {
-          if (typeof url !== "undefined") {
-            window.location = url;
-          }
+          if (typeof url !== "undefined") window.location = url;
         };
         gtag("event", "conversion", {
           send_to: "AW-17694211570/jmFBCMmwp7gbEPL7oPVB",
+          event_callback: callback,
+        });
+        return false;
+      }
+
+      // === Конверсия 2: Номер на странице (например, клик по телефону на странице) ===
+      function gtag_report_phone(url) {
+        var callback = function () {
+          if (typeof url !== "undefined") window.location = url;
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-17694211570/4Jt9COXFprgbEPL7oPVB",
+          value: 11.0,
+          currency: "UAH",
           event_callback: callback,
         });
         return false;
