@@ -122,16 +122,20 @@
         return false;
       }
 
-      // === Конверсия 2: Номер на странице (например, клик по телефону на странице) ===
-      function gtag_report_phone(url) {
+      <!-- Event snippet for клик на номер на сайте conversion page
+      In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+      <script>
+      function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof url !== "undefined") window.location = url;
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
         };
-        gtag("event", "conversion", {
-          send_to: "AW-17694211570/4Jt9COXFprgbEPL7oPVB",
-          value: 11.0,
-          currency: "UAH",
-          event_callback: callback,
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17694211570/CcVXCIuvtbgbEPL7oPVB',
+            'value': 2.0,
+            'currency': 'UAH',
+            'event_callback': callback
         });
         return false;
       }
