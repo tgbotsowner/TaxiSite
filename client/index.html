@@ -96,7 +96,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- 🔹 Google Ads Tag + Конверсии: "Контакт" и "Номер на странице гугл" -->
+    <!-- 🔹 Google Ads Tag + Конверсии: "Контакт" и "Клик на номер на сайте" -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-17694211570"
@@ -122,20 +122,16 @@
         return false;
       }
 
-      <!-- Event snippet for клик на номер на сайте conversion page
-      In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-      <script>
+      // === Конверсия 2: Клик на номер на сайте ===
       function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
+          if (typeof url !== "undefined") window.location = url;
         };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17694211570/CcVXCIuvtbgbEPL7oPVB',
-            'value': 2.0,
-            'currency': 'UAH',
-            'event_callback': callback
+        gtag("event", "conversion", {
+          send_to: "AW-17694211570/CcVXCIuvtbgbEPL7oPVB",
+          value: 2.0,
+          currency: "UAH",
+          event_callback: callback,
         });
         return false;
       }
