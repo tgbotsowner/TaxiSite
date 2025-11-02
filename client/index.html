@@ -96,12 +96,24 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Event snippet for Контакт conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Google Ads Tag + Event (Контакт / Звонок) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17694211570"
+    ></script>
     <script>
+      // === Основная инициализация Google Ads Tag ===
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17694211570");
+
+      // === Отслеживание звонков (конверсия "Контакт") ===
       function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof url != "undefined") {
+          if (typeof url !== "undefined") {
             window.location = url;
           }
         };
